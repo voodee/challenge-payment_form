@@ -1,0 +1,1 @@
+export default ($el) => $el.removeClass('input--error') 

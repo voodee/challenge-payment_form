@@ -1,0 +1,138 @@
+.ui-logo
+  float: left
+  box-sizing: content-box
+  position: relative
+  z-index: 670
+  // left: 35px
+  // top: 35px
+  width: 176px
+  height: 36px
+  // padding: 30px
+  cursor: pointer
+  -webkit-transition: -webkit-transform 0.0875s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)
+  transition: transform 0.0875s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)
+  font-size: 0
+  overflow: hidden
+
+  .ui-logo__name__text_1
+    transition: all .5s ease-out
+    top: -1px
+
+  .ui-logo__name__text_2
+    transition: all .5s ease-out  
+    top: 36px
+
+  &--hover
+    .ui-logo__name__text_1
+      top: 36px
+
+    .ui-logo__name__text_2  
+      top: -1px
+
+.m-no-touch .ui-logo:active
+  -webkit-transform: translateY(2px)
+  -ms-transform: translateY(2px)
+  transform: translateY(2px)
+
+.page_preloading .ui-logo
+  cursor: default
+
+.ui-logo__shadow
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background: url('../images/ui-logo-shadow.png') no-repeat 0 4px
+  opacity: 0
+  -webkit-transition: opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)
+  transition: opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+.page_posters .ui-logo__shadow
+  opacity: 0.2
+
+.ui-logo__name
+  position: relative
+  overflow: hidden
+  z-index: 701
+  width: 139px
+  height: 34px
+  background: none !important
+  border: 1px solid #FFF
+  -webkit-transition: border-color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)
+  transition: border-color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+.ui-logo
+  svg
+    display: block
+  path
+    fill: #FFF
+    -webkit-transition: fill 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)
+    transition: fill 0.6s cubic-bezier(0.215, 0.61, 0.355, 1)
+
+.ui-logo__domain
+  position: absolute
+  left: 149px
+  top: 9px
+
+.ui-logo__name__text
+  position: absolute
+  left: -1px
+
+.ui-logo__name__text_1
+  top: -1px
+
+.ui-logo__name__text_2
+  top: -36px
+
+.ui-logo__title
+  position: absolute
+  left: 30px
+  top: 75px
+  color: #FFF
+  font-size: 14px
+  white-space: nowrap
+  opacity: 0
+  -webkit-transition: opacity .6s
+  transition: opacity 0.6s
+
+.d-no-phone .page_content
+  .ui-logo path
+    fill: #FFF !important
+  .ui-logo__name
+    border-color: #FFF !important
+  .ui-logo__title
+    opacity: .7
+    -webkit-transition-delay: .175s
+    transition-delay: 0.175s
+  .ui-logo:hover .ui-logo__title
+    opacity: 1
+    -webkit-transition-delay: .00001s
+    transition-delay: .00001s
+    -webkit-transition-duration: .175s
+    transition-duration: 0.175s
+
+.page_preloading
+  .ui-logo path
+    fill: #bcbec3 !important
+  .ui-logo__name
+    border-color: #bcbec3 !important
+
+// @media screen and (max-height: 800px), screen and (max-width: 1000px)
+//   .ui-logo
+//     top: 15px
+
+// @media screen and (max-width: 1100px), screen and (max-height: 800px)
+//   .ui-logo
+//     left: 15px
+
+// @media screen and (max-width: 1000px)
+//   .page_content .ui-logo
+//     opacity: 0
+//   .ui-logo__title
+//     display: none
+
+// @media screen and (max-width: 767px)
+//   .ui-logo
+//     top: -10px
+//     left: -10px

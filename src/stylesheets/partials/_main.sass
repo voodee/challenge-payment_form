@@ -1,0 +1,33 @@
+.main
+  display: block
+  background: $main-background-color
+  padding: 43px 25px 46px
+
+  &__sub-title
+    margin-top: 30px
+
+  &__action
+    padding-top: 5px
+
+
+.info
+  line-height: 25px
+  text-align: left
+
+  th 
+    font-weight: normal
+    color: $color-text--main
+    padding-right: 15%
+    white-space: nowrap
+
+  td 
+    color: $color-text--info
+
+  @media (max-width: $screen-xs-max)
+    width: 100%
+    
+    th 
+      padding: 0
+
+    td
+      text-align: right  

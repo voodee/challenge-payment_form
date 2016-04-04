@@ -1,0 +1,131 @@
+
+
+.card
+  border: 1px solid $primary-color
+  border-radius: 9px
+  width: 65%
+  float: left
+  background: $card-background
+
+  @media (max-width: $screen-xs-max) 
+    width: 100%
+    float: none
+
+  &__box
+    position: relative
+    margin: 22px 0 3rem
+    zoom: 1
+
+    &:after
+      content: '.'
+      display: block
+      height: 0
+      clear: both
+      visibility: hidden
+
+
+  &__title
+    margin: 0
+    color: $text-color
+    font-size: 16px
+
+  // &--front,
+  // &--back
+
+  &--front
+    position: relative
+    z-index: 2
+    padding: 20px 15px
+
+
+
+  &--back
+    position: absolute
+    height: 100%
+    z-index: 1
+    right: 0
+    text-align: right
+    margin-top: 2rem
+    padding: 25px 15px
+    overflow: hidden
+
+    @media (max-width: $screen-xs-max) 
+      position: relative
+
+
+  &-list
+    margin: 0 -1%
+    overflow: auto
+
+    &__item
+      float: left
+      margin: 0 1%
+      width: 20% 
+
+      @media (max-width: $screen-xs-max)
+        width: 23% 
+
+
+  &__input
+    padding-top: 21px
+
+    &-tooltip
+      position: absolute
+      right: 8px
+      top: 50%
+      width: 25px
+      height: 25px
+      color: #bec6cf
+      border-radius: 50%
+      border: 1px solid #bec6cf
+      margin-top: 7px
+      text-align: center
+      line-height: 25px
+
+
+    input 
+      width: 100%
+      height: 40px
+      border: 1px solid $primary-color
+      outline: 0
+      padding: 0 11px
+      transition: .1s ease-out
+      transition-property: border-color, border-width
+
+  
+      &:hover
+        border-color: darken($primary-color, 5%)
+        
+      &:focus 
+        border: 2px solid #ffdb4d
+
+
+    &--number  
+      padding-top: 0
+
+    &--date  
+      overflow: auto
+
+    &--name
+      padding-top: 12px
+
+    &--cvv
+      // border-top: 40px solid $primary-color
+      position: relative
+      margin-top: 40px
+
+      input 
+        width: auto
+        max-width: 130px
+        padding-right: 35px
+
+      &:before
+        content: ''
+        position: absolute
+        width: 200%
+        top: -40px
+        left: -50%
+        height: 40px
+        margin-right: -1 * ceil(($grid-gutter-width / 2))
+        background: $primary-color
+

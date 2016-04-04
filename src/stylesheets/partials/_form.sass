@@ -1,0 +1,63 @@
+::-webkit-input-placeholder 
+  color: $color-placeholder
+  font-size: $font-form-size
+::-moz-placeholder
+  color: $color-placeholder
+  font-size: $font-form-size
+:-moz-placeholder
+  color: $color-placeholder
+  font-size: $font-form-size
+:-ms-input-placeholder
+  color: $color-placeholder
+  font-size: $font-form-size
+
+.select
+  appearance: button
+  height: 40px
+  background: #fff
+  padding: 0 20px 0 11px
+  outline: 0
+  border-width: 0
+  font-family: $font-form-family
+  font-size: $font-form-size
+  font-weight: 300
+  padding-right: 30px
+
+  &__box
+    float: left
+    display: inline-block
+    position: relative
+    margin: 0 2% 0 0
+    border: 1px solid $primary-color
+    color: $color-select-text
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      pointer-events: none
+
+    &:before
+      top: 0
+      right: 0
+      width: 25px
+      height: 100%
+      background: #fff
+
+    &:after
+      top: 50%
+      right: 10px
+      width: 9px
+      height: 9px
+      margin-top: -8px
+      border-bottom: 1px solid $color-pointer
+      border-right: 1px solid $color-pointer
+      transform: rotate(45deg)
+
+    &:hover
+      border-color: darken($primary-color, 5%)
+
+
+.input
+  &--error
+    border: 2px solid red !important      

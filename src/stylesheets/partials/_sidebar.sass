@@ -1,0 +1,40 @@
+.sidebar 
+  display: block
+  background: $sidebar-background-color
+  border-right: 1px solid #101114
+
+  &__logo
+    padding: 64px 30px 0
+
+    @media (max-width: $screen-sm-max)
+      padding: 20px
+      overflow: auto
+      height: auto !important
+
+  @media (max-width: $screen-sm-max)
+    position: fixed 
+    top: 0
+    left: 0
+    margin: 0
+    width: 100%
+    z-index: 999
+
+
+.menu
+  float: right 
+  position: relative 
+  // text-indent: -9999rem
+  width: 4rem
+  height: 4rem
+
+  
+  &:before
+    content: ''
+    box-sizing: content-box
+    position: absolute
+    top: .7rem
+    left: 0
+    width: 4rem
+    height: 0.5rem
+    border-top: 1.5rem double #fff
+    border-bottom: 0.5rem solid #fff

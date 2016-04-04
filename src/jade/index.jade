@@ -1,0 +1,95 @@
+extends layouts/application
+
+append config
+  - var PageTitle = 'Форма оплаты'
+  - var PageDescription = ''
+  - var PagePath = '/'
+
+block content
+  .container.page.page__index
+    .row
+      .col-md-4
+        sidebar.row.sidebar( data-module='sidebar' )
+          .sidebar__logo
+            include shared/logo
+            .menu.hidden-md.hidden-lg.text-hide( data-module='menu' ) Навигация
+
+          ul.navigation.hidden-xs.hidden-sm( role='navigation' )
+            li
+              a.navigation__link( href='#' ) Первая ссылка  
+            li
+              a.navigation__link.navigation__link--active( href='#' ) Вторая ссылка 
+            li
+              a.navigation__link( href='#' ) Третья ссылка  
+            li
+              a.navigation__link.navigation__link--secondary( href='#' ) Личный кабинет
+            li
+              a.navigation__link.navigation__link--secondary( href='#' ) Выйти 
+
+      main.col-md-8( role='main' )
+        header.row.header
+          h1.typography-header__title Заголовок страницы
+          p.typography-header__desc
+           | В отличие от пылевого и ионного хвостов, направление поступает 
+           br.hidden-xs
+           | в лимногляциальный часовой угол
+
+
+        form.row.main
+          p.typography-base__text Информация по оплате:
+          table.info
+            tr
+              th Номер счета:
+              td 87123658716587
+            tr
+              th Сумма платежа:
+              td 100 руб.
+
+          h2.main__sub-title.typography-base__title Данные банковской карты   
+
+          .card__box
+            .card.card--front
+              .card__input.card__input--number
+                p.card__title Номер карты
+                .card-list
+                  each val in [1, 2, 3, 4]
+                    .card-list__item
+                      //- input( type='number', min=1000, max=9999, autofocus=(val == 1) ? true : false, required=true )
+                      input( type='text', name="number-#{val}", autofocus=(val == 1) ? true : false, required=true, data-module='validationOnlyNumber validationLength' )&attributes({'data-max': 4, 'data-min': 4})
+
+              .card__input.card__input--date
+                p.card__title Срок действия
+                
+                label.select__box
+                  select.select
+                    - var m = 1
+                    while m < 12 + 1
+                      option= m++
+
+                label.select__box
+                  select.select
+                    - var y = 2016
+                    while y < 2019 + 1
+                      option= y++
+
+              .card__input.card__input--name
+                input( type='text', name='name', placeholder='Держатель карты', required=true, data-module='validationOnlyLatin validationLength' )&attributes({'data-min': 4})
+
+            .card.card--back
+              .card__input.card__input--cvv
+                p.card__title Код CVV2 / CVC2
+                p.card__input-tooltip(data-module='tooltip', data-toggle='tooltip', data-placement='bottom', title='Код на обратной стороне карты') ?
+                input( type='text', required=true, data-module='validationOnlyNumber' )
+
+          .main__action  
+            button.btn.btn__submit( type='submit' ) Оплатить
+
+
+        footer.row.footer( role='contentinfo' )
+          p Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+
+          p Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+
+          p Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+
+          p Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
