@@ -1,5 +1,3 @@
-
-
 .card
   border: 1px solid $primary-color
   border-radius: 9px
@@ -48,6 +46,15 @@
     margin-top: 2rem
     padding: 25px 15px
     overflow: hidden
+
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      top: 25px
+      left: 0
+      height: 40px
+      background: $primary-color
 
     @media (max-width: $screen-xs-max) 
       position: relative
@@ -118,14 +125,4 @@
         width: auto
         max-width: 130px
         padding-right: 35px
-
-      &:before
-        content: ''
-        position: absolute
-        width: 200%
-        top: -40px
-        left: -50%
-        height: 40px
-        margin-right: -1 * ceil(($grid-gutter-width / 2))
-        background: $primary-color
 
